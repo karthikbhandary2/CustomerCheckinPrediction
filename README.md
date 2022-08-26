@@ -1,2 +1,50 @@
-# CustomerCheckinPrediction
+# NextLabs Interview
+## Part 1(Regex)
+
+import re
+s = {"orders":[{"id":1},{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10},{"id":11},{"id":648},{"id":649},{"id":650},{"id":651},{"id":652},{"id":653}],"errors":[{"code":3,"message":"[PHP Warning #2] count(): Parameter must be an array or an object that implements Countable (153)"}]}\
+re.findall('(?<=:)\d+', s)
+
+## Part 2 (CustomerCheckinPrediction)
 In this project I predict whether a customer checks into the hotel they booked or not using the features provided. I specifically used NLP model to compete the task. I also deployed the model on to the web.
+
+### Steps I followed:
+- First imported the required packages
+- Read the train and test data omitting the index column.
+- Combined both train and test to make it easy to work.
+- Took a look at how the data is and their dtypes by using the .info() method.
+- I took a look at the unique values of all the columns to see if there is any need of data cleaning.
+- I did some EDA(available in the colab notebook)
+- I droped `ID`, `Unnamed: 0` and `Nationality` since they do not contribute to the model.
+- I filled the missing values in the Age with the mean of that column.
+- I then replaced the values which are greater than one in the column `BookingsCheckedIn` which is the target column. I did the same with `BookingsNoShowed` and `BookingsCanceled`
+- I then encoded the `DistributionChannel` and `MarketSegment` columns using the LabelEncoder() from `sklearn.preprocessing`.
+- I created a pickle file for each of the encoded column to be used in the `app.py`(can be found in model.py)
+- I divided the dataset into `X` and `y`.
+- I scaled `X` with the help of `MinMaxScaler` from `sklearn.preprocessing`
+- I applied `train_test_split()` from `sklearn.model_selection`, where 80% is training data and remaining 20% is the testing data.
+- I instantiated the `MultinomialNB()` which is a NLP model from `sklearn.naive_bayes`
+- I fitted the training data.
+- I then used the `.predict(X_test)`.
+- I made every prediction that is greater than 0.5 to 1.
+- I then made a `classification_report`.
+- The model gave an accuracy of 1.0 and precision of 1.0 as well.
+- Finally I pickled the model.
+
+### In app.py (Flask was used to deploy the model)
+- This file is used to deploy the model on to the web.
+- In this the pickle files created above are first imported.
+- I created a function `home()` to render the home page.
+- `predict()` is used to make prediction by collecting the inputs from the website and then storing that in a list.
+- We then do some transformations using the pickled encoder.
+- Then pass all the features to make predictions and return the output.
+
+### In index.html
+- Contains all the script for the front end of the app.
+- It also uses the css file.
+
+All of this is used and hosted with the help of `heroku`. We basically linked this github repo and done!!
+
+## Bonus
+I think the difficult problem that I got around doing this is the deployment part. I was not ready for it at all. Like I said in the audio round. I once deployed my portfolio website using flask. I thought it would be easy this time as well as it was then but it was not. This doesn't even compare to it like I had completely no idea on how to do it. 
+I had to go throught YouTube, stackoverflow, discord to get it done. I had to get a lot of pointers from discord which really helped in me developing like they only gave me directions and I had to implement them on my own. I have to say this was not easy, but I am glad that I was able to complete this project since now I can say I am better than I was before(not much but it is honest work😉)
