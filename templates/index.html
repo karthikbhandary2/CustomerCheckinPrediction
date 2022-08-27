@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+    <h1>Predict Salary Analysis</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <div class="left">
+            <input type="text" name="Age " placeholder="Age " required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="DaysSinceCreation" placeholder="DaysSinceCreation" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="AverageLeadTime" placeholder="AverageLeadTime" required="required" />
+        </div>
+
+        <div class="left">
+            <input type="text" name="LodgingRevenue" placeholder="LodgingRevenue" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="OtherRevenue" placeholder="OtherRevenue" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="BookingsCanceled" placeholder="BookingsCanceled(0/1)" required="required" />
+        </div>
+    
+        <div class="left">
+            <input type="text" name="BookingsNoShowed" placeholder="BookingsNoShowed(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="PersonsNights" placeholder="PersonsNights" required="required" />
+        </div>
+        <div class="left">    
+            <input type="text" name="RoomNights" placeholder="RoomNights" required="required" />
+        </div>
+    
+        <div class="left">
+            <input type="text" name="DaysSinceLastStay" placeholder="DaysSinceLastStay" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="DaysSinceFirstStay" placeholder="DaysSinceFirstStay" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="DistributionChannel" placeholder="DistributionChannel" required="required" />
+        </div>
+    
+        <div class="left">
+            <input type="text" name="MarketSegment" placeholder="MarketSegment" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRHighFloor" placeholder="SRHighFloor(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRLowFloor" placeholder="SRLowFloor(0/1)" required="required" />
+        </div>
+    
+        <div class="left">
+            <input type="text" name="SRAccessibleRoom" placeholder="SRAccessibleRoom(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRMediumFloor" placeholder="SRMediumFloor(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRBathtub" placeholder="SRBathtub(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRShower" placeholder="SRShower(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRCrib" placeholder="SRCrib(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRKingSizeBed" placeholder="SRKingSizeBed(0/1)" required="required" />
+        </div>
+    
+        <div class="left">
+            <input type="text" name="SRTwinBed" placeholder="SRTwinBed(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRNearElevator" placeholder="SRNearElevator(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRAwayFromElevator" placeholder="SRAwayFromElevator(0/1)" required="required" />
+        </div>  
+        <div class="left">
+            <input type="text" name="SRNoAlcoholInMiniBar" placeholder="SRNoAlcoholInMiniBar(0/1)" required="required" />
+        </div>
+        <div class="left">
+            <input type="text" name="SRQuietRoom" placeholder="SRQuietRoom(0/1)" required="required" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+  </div>
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+
+<div>
+    
+</div>
