@@ -6,7 +6,7 @@ s = {"orders":[{"id":1},{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"
 re.findall('(?<=:)\d+', s)
 
 ## Part 2 (CustomerCheckinPrediction)
-In this project I predict whether a customer checks into the hotel they booked or not using the features provided. I specifically used NLP model to compete the task. I also deployed the model on to the web.
+In this project I predict whether a customer checks into the hotel they booked or not using the features provided (The datasets are available in this repo). I specifically used NLP model to compete the task. I also deployed the model on to the web.
 
 ### Steps I followed:
 - First imported the required packages
@@ -43,7 +43,13 @@ In this project I predict whether a customer checks into the hotel they booked o
 - Contains all the script for the front end of the app.
 - It also uses the css file.
 
-All of this is used and hosted with the help of `heroku`. We basically linked this github repo and done!! Here is the link to the app: https://customer-check-in-prediction.herokuapp.com/predict
+All of this is used and hosted with the help of `heroku`. We basically linked this github repo and done!! Here is the link to the app: https://customer-check-in-prediction.herokuapp.com/
+
+## Instructions in case you want to run this on your device:
+- first you have to create a virtual environment you can do that by using the following command: `py -3 -m venv venv` (for windows)
+- That will create a virtual environmment. You can activate it by using the command: `venv\Scripts\activate` (for windows)
+- This will activate the virtual environment. Next run the file `model.py` by using: `python model.py`
+- After running that run the `app.py` using: `python app.py` This will give you a link, using which you can visit the web app.
 
 ## Bonus
 I think the difficult problem that I got around doing this is the deployment part. I was not ready for it at all. Like I said in the audio round. I once deployed my portfolio website using flask. I thought it would be easy this time as well as it was then but it was not. This doesn't even compare to it like I had completely no idea on how to do it. 
