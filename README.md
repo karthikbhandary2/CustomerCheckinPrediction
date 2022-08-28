@@ -43,7 +43,7 @@ In this project I predict whether a customer checks into the hotel they booked o
 - Contains all the script for the front end of the app.
 - It also uses the css file.
 
-All of this is used and hosted with the help of `heroku`. We basically linked this github repo and done!!
+All of this is used and hosted with the help of `heroku`. We basically linked this github repo and done!! Here is the link to the app: https://customer-check-in-prediction.herokuapp.com/predict
 
 ## Bonus
 I think the difficult problem that I got around doing this is the deployment part. I was not ready for it at all. Like I said in the audio round. I once deployed my portfolio website using flask. I thought it would be easy this time as well as it was then but it was not. This doesn't even compare to it like I had completely no idea on how to do it. 
