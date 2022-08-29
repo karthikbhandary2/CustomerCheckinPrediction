@@ -59,4 +59,4 @@ In particular, I had trouble with using the `scaler` and to use it to transform 
  It is nothing but the practice of fine tuning the weights of a neural network based on the error rate or loss that the neural networks gets from the previous epochs. If there are Nulls in the dataset we can counter it in many ways. Some of them are:
  - We can just drop them.
  - We can use random data may be use gaussian distribution.
- - We can fill them up with avgerage values.
+ - We can fill them up with avgerage value.
