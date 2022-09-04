@@ -18,7 +18,7 @@ In this project I predict whether a customer checks into the hotel they booked o
 - I droped `ID`, `Unnamed: 0` and `Nationality` since they do not contribute to the model.
 - I filled the missing values in the Age with the mean of that column.
 - I then replaced the values which are greater than one in the column `BookingsCheckedIn` which is the target column. I did the same with `BookingsNoShowed` and `BookingsCanceled`
-- I then encoded the `DistributionChannel` and `MarketSegment` columns using the LabelEncoder() from `sklearn.preprocessing`.
+- I then encoded the `DistributionChannel` and `MarketSegment` columns using the `LabelEncoder()` from `sklearn.preprocessing`.
 - I created a pickle file for each of the encoded column to be used in the `app.py`(can be found in model.py)
 - I divided the dataset into `X` and `y`.
 - I scaled `X` with the help of `MinMaxScaler` from `sklearn.preprocessing`
