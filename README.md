@@ -1,11 +1,4 @@
-# NextLabs Interview
-## Part 1(Regex)
-
-import re\
-s = {"orders":[{"id":1},{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10},{"id":11},{"id":648},{"id":649},{"id":650},{"id":651},{"id":652},{"id":653}],"errors":[{"code":3,"message":"[PHP Warning #2] count(): Parameter must be an array or an object that implements Countable (153)"}]}\
-re.findall('(?<=:)\d+', s)
-
-## Part 2 (CustomerCheckinPrediction)
+## CustomerCheckinPrediction
 In this project I predict whether a customer checks into the hotel they booked or not using the features provided (The datasets are available in this repo). I specifically used NLP model to complete the task. I also deployed the model on to the web.
 
 ### Steps I followed:
