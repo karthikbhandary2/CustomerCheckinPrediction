@@ -6,7 +6,7 @@ s = {"orders":[{"id":1},{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"
 re.findall('(?<=:)\d+', s)
 
 ## Part 2 (CustomerCheckinPrediction)
-In this project I predict whether a customer checks into the hotel they booked or not using the features provided (The datasets are available in this repo). I specifically used NLP model to compete the task. I also deployed the model on to the web.
+In this project I predict whether a customer checks into the hotel they booked or not using the features provided (The datasets are available in this repo). I specifically used NLP model to complete the task. I also deployed the model on to the web.
 
 ### Steps I followed:
 - First imported the required packages
