@@ -44,12 +44,6 @@ All of this is used and hosted with the help of `heroku`. We basically linked th
 - This will activate the virtual environment. Next run the file `model.py` by using: `python model.py`
 - After running that run the `app.py` using: `python app.py` This will give you a link, using which you can visit the web app.
 
-## Bonus
+## Challenges Faced
 I think the difficult problem that I got around doing this is the deployment part. I was not ready for it at all. Like I said in the audio round. I once deployed my portfolio website using flask. I thought it would be easy this time as well as it was then but it was not. This doesn't even compare to it like I had completely no idea on how to do it. 
 In particular, I had trouble with using the `scaler` and to use it to transform the features. I had to go throught YouTube, stackoverflow, discord to get it done. I had to get a lot of pointers from discord which really helped in me developing like they only gave me directions and I had to implement them on my own. I have to say this was not easy, but I am glad that I was able to complete this project since now I can say I am better than I was before(not much but it is honest work😉) When I finally got it I felt really happy.
-
-**Back Propagation**: 
- It is nothing but the practice of fine tuning the weights of a neural network based on the error rate or loss that the neural networks gets from the previous epochs. If there are Nulls in the dataset we can counter it in many ways. Some of them are:
- - We can just drop them.
- - We can use random data may be use gaussian distribution.
- - We can fill them up with avgerage value.
