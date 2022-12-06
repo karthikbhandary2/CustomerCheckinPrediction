@@ -16,7 +16,7 @@ In this project I predict whether a customer checks into the hotel they booked o
 - I divided the dataset into `X` and `y`.
 - I scaled `X` with the help of `MinMaxScaler` from `sklearn.preprocessing`
 - I applied `train_test_split()` from `sklearn.model_selection`, where 80% is training data and remaining 20% is the testing data.
-- I instantiated the `MultinomialNB()` which is a NLP model from `sklearn.naive_bayes`
+- I instantiated the `MultinomialNB()` which is a model from `sklearn.naive_bayes`
 - I fitted the training data.
 - I then used the `.predict(X_test)`.
 - I made every prediction that is greater than 0.5 to 1.
