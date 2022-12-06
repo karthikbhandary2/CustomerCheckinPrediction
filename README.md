@@ -1,5 +1,5 @@
 ## CustomerCheckinPrediction
-In this project I predict whether a customer checks into the hotel they booked or not using the features provided (The datasets are available in this repo). I specifically used NLP model to complete the task. I also deployed the model on to the web.
+In this project I predict whether a customer checks into the hotel they booked or not using the features provided (The datasets are available in this repo). I also deployed the model on to the web.
 
 ### Steps I followed:
 - First imported the required packages
